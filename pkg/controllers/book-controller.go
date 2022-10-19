@@ -14,7 +14,7 @@ import (
 var NewBook models.Book
 
 // Method to get all books
-func GetBook(w http.ResponseWriter, r *http.Request) {
+func GetBooks(w http.ResponseWriter, r *http.Request) {
 	NewBooks := models.GetAllBooks()
 	res, _ := json.Marshal(NewBooks)
 	w.Header().Set("Content-Type", "pkgapplication/json")
